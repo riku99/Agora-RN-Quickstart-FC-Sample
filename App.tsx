@@ -15,6 +15,7 @@ import RtcEngine, {
 
 const token = 'token';
 const channelName = 'channel';
+const appId = 'appId';
 
 const App = () => {
   const [engine, setEngine] = useState<RtcEngine>();
@@ -23,7 +24,7 @@ const App = () => {
 
   useEffect(() => {
     (async function () {
-      const engineResult = await RtcEngine.create(token);
+      const engineResult = await RtcEngine.create(appId);
       setEngine(engineResult);
     })();
   }, []);
